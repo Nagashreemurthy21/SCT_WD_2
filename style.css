@@ -1,0 +1,81 @@
+body {
+  background: linear-gradient(135deg, #1e1e2f, #343a40);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  margin-top: 100px;
+  max-width: 600px;
+}
+
+.stopwatch-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#display-wrapper {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 20px 0;
+  line-height: 1.2;
+  color: #0dcaf0;
+  letter-spacing: 2px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.subscript {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 42px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.btn {
+  min-width: 100px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+#laps {
+  margin-top: 30px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+#laps::-webkit-scrollbar {
+  width: 6px;
+}
+
+#laps::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+#laps li {
+  border-bottom: 1px solid #444;
+  padding: 5px 10px;
+}
+
+@keyframes pulse {
+  0%, 100% { text-shadow: 0 0 10px #0dcaf0; }
+  50% { text-shadow: 0 0 20px #0dcaf0; }
+}
